@@ -106,20 +106,23 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            AddressSfPackage(
-              onChangeAddress: (address) {
-                print(address);
-              },
-              onSelectedProvinceDistrictWard: (province, district, ward) {
-                print(province?.name);
-                print(district?.name);
-                print(ward?.name);
-              },
-              addressPathJson: 'assets/address/address_dev.json',
-              initAddress: '',
-              initProvince: '',
-              initDistrict: '',
-              initWard: '',
+            Padding(
+              padding: const EdgeInsets.only(left: 12, right: 12),
+              child: AddressSfPackage(
+                onChangeAddress: (address) {
+                  print(address);
+                },
+                onSelectedProvinceDistrictWard: (province, district, ward) {
+                  print(province?.name);
+                  print(district?.name);
+                  print(ward?.name);
+                },
+                addressPathJson: 'assets/address/address_dev.json',
+                initAddress: '',
+                initProvince: '',
+                initDistrict: '',
+                initWard: '',
+              ),
             ),
           ],
         ),
